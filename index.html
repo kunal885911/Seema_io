@@ -1,3 +1,5 @@
+
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -492,4 +494,729 @@
     .testi-author { display: flex; align-items: center; gap: 14px; }
     .testi-avatar {
       width: 44px; height: 44px; border-radius: 50%;
-  
+      background: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 600; color: var(--dark);
+    }
+    .testi-name { font-size: 0.82rem; color: var(--cream); font-weight: 500; }
+    .testi-place { font-size: 0.68rem; color: rgba(201,168,76,0.7); letter-spacing: 0.12em; margin-top: 2px; }
+
+    /* ===================== CONTACT ===================== */
+    #contact {
+      padding: 120px 8%;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 100px; align-items: start;
+    }
+    .contact-info .section-title { margin-bottom: 24px; }
+    .contact-info p { font-size: 0.92rem; line-height: 1.85; color: var(--mid); margin-bottom: 40px; }
+    .contact-details { display: flex; flex-direction: column; gap: 20px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-icon {
+      width: 42px; height: 42px;
+      background: var(--gold-pale); border: 1px solid var(--gold-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;
+    }
+    .contact-item-text { display: flex; flex-direction: column; }
+    .contact-item-label {
+      font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 4px;
+    }
+    .contact-item-value { font-size: 0.88rem; color: var(--mid); line-height: 1.6; }
+    .contact-social { display: flex; gap: 12px; margin-top: 40px; }
+    .social-btn {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(61,43,31,0.2);
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; color: var(--mid); font-size: 0.85rem;
+      transition: 0.3s;
+    }
+    .social-btn:hover { background: var(--dark); color: var(--gold); border-color: var(--dark); }
+
+    /* CONTACT FORM */
+    .contact-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--mid); font-weight: 500;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 14px 16px;
+      border: 1px solid rgba(61,43,31,0.2);
+      background: transparent; font-family: 'Raleway', sans-serif;
+      font-size: 0.88rem; color: var(--dark);
+      outline: none; transition: border-color 0.3s;
+      resize: none;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--gold); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-submit {
+      background: var(--dark); color: var(--cream);
+      padding: 16px 40px; border: none; cursor: pointer;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      font-weight: 500; align-self: flex-start;
+      transition: background 0.35s, transform 0.25s;
+    }
+    .form-submit:hover { background: var(--crimson); transform: translateY(-2px); }
+
+    /* ===================== FOOTER ===================== */
+    footer {
+      background: var(--dark);
+      padding: 80px 8% 40px;
+      border-top: 1px solid rgba(201,168,76,0.2);
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px; margin-bottom: 60px;
+    }
+    .footer-brand .nav-logo { display: inline-block; margin-bottom: 20px; }
+    .footer-brand .nav-logo,
+    .footer-brand .nav-logo span { color: var(--cream); }
+    .footer-brand .nav-logo span { color: var(--gold); }
+    .footer-brand p {
+      font-size: 0.82rem; line-height: 1.8;
+      color: rgba(240,230,211,0.55); max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px; font-weight: 500;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a {
+      font-size: 0.82rem; color: rgba(240,230,211,0.55);
+      text-decoration: none; transition: color 0.3s;
+    }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(201,168,76,0.1);
+      padding-top: 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: 0.72rem; color: rgba(240,230,211,0.35);
+      letter-spacing: 0.05em;
+    }
+    .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+    /* ===================== SCROLL REVEAL ===================== */
+    .reveal {
+      opacity: 0; transform: translateY(36px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===================== BACK TO TOP ===================== */
+    .back-top {
+      position: fixed; bottom: 36px; right: 36px;
+      width: 48px; height: 48px;
+      background: var(--dark); color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; cursor: pointer;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.4s, background 0.3s;
+      z-index: 500; text-decoration: none;
+    }
+    .back-top.visible { opacity: 1; pointer-events: all; }
+    .back-top:hover { background: var(--crimson); }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 1100px) {
+      .gallery-masonry { columns: 3; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 900px) {
+      #hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 400px; }
+      .hero-left { padding: 120px 6% 60px; }
+      #about { grid-template-columns: 1fr; gap: 60px; }
+      .about-img-collage { height: 400px; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .process-steps::before { display: none; }
+      .testi-grid { grid-template-columns: 1fr; }
+      #contact { grid-template-columns: 1fr; gap: 60px; }
+    }
+    @media (max-width: 750px) {
+      .gallery-masonry { columns: 2; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-title { font-size: 2.8rem; }
+      .hero-stats { flex-wrap: wrap; gap: 24px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+    }
+    @media (max-width: 480px) {
+      .gallery-masonry { columns: 1; }
+      .testi-grid { grid-template-columns: 1fr; }
+      #hero { grid-template-columns: 1fr; }
+      .hero-float-tag { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- BACK TO TOP -->
+  <a href="#hero" class="back-top" id="backTop">↑</a>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#services" onclick="closeMobileMenu()">Services</a>
+    <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+    <a href="#process" onclick="closeMobileMenu()">Process</a>
+    <a href="#testimonials" onclick="closeMobileMenu()">Reviews</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Seema <span>Silai</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-badge">Est. 2008 &nbsp;·&nbsp; Master Tailoring</div>
+      <h1 class="hero-title">
+        <span>Where Fabric</span>
+        <em>Becomes</em>
+        <strong>Art</strong>
+      </h1>
+      <p class="hero-desc">
+        Exquisite hand-crafted garments tailored to perfection. From bridal couture to everyday elegance, every stitch tells a story of devotion, skill, and timeless beauty.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book Appointment</a>
+        <a href="#gallery" class="btn-secondary">View Portfolio →</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">15<span>+</span></div>
+          <div class="stat-label">Years of Craft</div>
+        </div>
+        <div>
+          <div class="stat-num">2<span>k</span></div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div>
+          <div class="stat-num">98<span>%</span></div>
+          <div class="stat-label">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-fabric-bg"></div>
+      <div class="hero-img-frame">
+        <div class="hero-img-placeholder">
+          <span>✂</span>
+          <p>Couture Atelier</p>
+        </div>
+      </div>
+      <div class="hero-float-tag top-left">
+        <strong>Bespoke</strong>
+        Tailoring
+      </div>
+      <div class="hero-float-tag bottom-right">
+        <strong>Handcrafted</strong>
+        With Love
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-inner" id="marqueeInner">
+      <span class="marquee-item">Bridal Couture</span>
+      <span class="marquee-item">Lehenga Choli</span>
+      <span class="marquee-item">Salwar Kameez</span>
+      <span class="marquee-item">Blouse Stitching</span>
+      <span class="marquee-item">Alterations & Repairs</span>
+      <span class="marquee-item">Designer Wear</span>
+      <span class="marquee-item">Party Gowns</span>
+      <span class="marquee-item">Traditional Attire</span>
+      <span class="marquee-item">Embroidery Work</span>
+      <span class="marquee-item">Custom Fitting</span>
+      <span class="marquee-item">Bridal Couture</span>
+      <span class="marquee-item">Lehenga Choli</span>
+      <span class="marquee-item">Salwar Kameez</span>
+      <span class="marquee-item">Blouse Stitching</span>
+      <span class="marquee-item">Alterations & Repairs</span>
+      <span class="marquee-item">Designer Wear</span>
+      <span class="marquee-item">Party Gowns</span>
+      <span class="marquee-item">Traditional Attire</span>
+      <span class="marquee-item">Embroidery Work</span>
+      <span class="marquee-item">Custom Fitting</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-img-collage reveal">
+      <div class="collage-box c1">
+        <span>🧵</span>
+        <p>Fine Stitching</p>
+      </div>
+      <div class="collage-box c2">
+        <span>✂️</span>
+        <p>Precision Cut</p>
+      </div>
+      <div class="collage-accent">Since<br/>2008</div>
+    </div>
+    <div class="about-text reveal">
+      <div class="section-tag">Our Story</div>
+      <h2 class="section-title">
+        Crafting <em>Elegance,</em><br/>
+        <strong>One Stitch at a Time</strong>
+      </h2>
+      <p>
+        Seema Silai Centre was born from a lifelong passion for the art of tailoring. Founded by Seema Ji in 2008, our atelier has grown from a humble neighbourhood studio into a beloved destination for women seeking garments that truly fit—body, soul, and style.
+      </p>
+      <p>
+        Every garment that leaves our studio carries with it hours of careful measurement, hand-sewn precision, and an intimate understanding of how fabric drapes, flows, and flatters. We believe clothing is not merely functional—it is an expression of identity.
+      </p>
+      <p>
+        From intricate bridal lehengas adorned with delicate hand embroidery, to impeccably fitted everyday salwar suits, we treat each project with equal reverence and skill.
+      </p>
+      <div class="about-signature">
+        Seema Devi
+        <span>Master Tailor &amp; Founder</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header reveal">
+      <div class="section-tag">What We Do</div>
+      <h2 class="section-title">Our <em>Craft &</em><br/><strong>Services</strong></h2>
+      <p>From the first consultation to the final fitting, every step is guided by precision, passion, and an uncompromising eye for detail.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-num">01</span>
+        <span class="service-icon">👰</span>
+        <h3 class="service-title">Bridal Couture</h3>
+        <p class="service-desc">Your most important day deserves the most extraordinary gown. We craft bespoke bridal lehengas, sarees, and gowns that you will treasure forever.</p>
+        <div class="service-tags">
+          <span class="service-tag">Lehenga</span>
+          <span class="service-tag">Bridal Saree</span>
+          <span class="service-tag">Sharara</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">02</span>
+        <span class="service-icon">🧵</span>
+        <h3 class="service-title">Salwar Kameez</h3>
+        <p class="service-desc">Classic silhouettes reimagined. Whether traditional Punjabi or contemporary fusion, every suit is cut and stitched to celebrate your unique proportions.</p>
+        <div class="service-tags">
+          <span class="service-tag">Anarkali</span>
+          <span class="service-tag">Palazzo</span>
+          <span class="service-tag">Straight Cut</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">03</span>
+        <span class="service-icon">✂️</span>
+        <h3 class="service-title">Blouse & Choli</h3>
+        <p class="service-desc">The perfect blouse transforms a saree. Our expertly crafted blouses and cholis feature intricate back designs, embroidery, and flawless fit.</p>
+        <div class="service-tags">
+          <span class="service-tag">Backless</span>
+          <span class="service-tag">Embroidered</span>
+          <span class="service-tag">Designer</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-num">04</span>
+        <span class="service-icon">🎀</span>
+        <h3 class="service-title">Alterations</h3>
+        <p class="service-desc">Breathe new life into your beloved garments. From resizing to complete redesigns, our alteration service makes the old feel wonderfully new.</p>
+        <div class="service-tags">
+          <span class="service-tag">Resizing</span>
+          <span class="service-tag">Repairs</span>
+          <span class="service-tag">Restoration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="gallery-header">
+      <div>
+        <div class="section-tag reveal">Our Work</div>
+        <h2 class="section-title reveal">The <em>Portfolio</em></h2>
+      </div>
+      <div class="gallery-filter">
+        <button class="filter-btn active" onclick="filterGallery(this,'all')">All</button>
+        <button class="filter-btn" onclick="filterGallery(this,'bridal')">Bridal</button>
+        <button class="filter-btn" onclick="filterGallery(this,'casual')">Casual</button>
+        <button class="filter-btn" onclick="filterGallery(this,'party')">Party</button>
+      </div>
+    </div>
+    <div class="gallery-masonry" id="galleryGrid">
+      <div class="gallery-item" data-cat="bridal">
+        <div class="gallery-placeholder" style="height:320px;"><span>👰</span><p>Bridal Lehenga</p></div>
+        <div class="gallery-overlay"><span class="gallery-label">Crimson Bridal Lehenga</span></div>
+      </div>
+      <div class="gallery-item" data-cat="casual">
+        <div class="gallery-placeholder" style="height:240px;"><span>👗</span><p>Salwar Suit</p></div>
+        <div class="gallery-overlay"><span class="gallery-label">Cotton Salwar Suit</span></div>
+      </div>
+      <div class="gallery-item" data-cat="party">
+        <div class="gallery-placeholder" style="height:280px;"><span>✨</span><p>Party Gown</p></div>
+        <div class="gallery-overlay"><span class="gallery-label">Embellished Party Gown</span></div>
+      </div>
+      <div class="gallery-item" data-cat="bridal">
+        <div class="gallery-placeholder" style="height:260px;"><span>🌸</span><p>Sharara Set</p></div>
+        <div class="gallery-overlay"><span class="gallery-label">Floral Sharara Set</span></div>
+      </div>
+      <div class="gallery-item" data-cat="casual">
+        <div class="gallery-placeholder" style="height:300px;"><span>🧵</span><p>Anarkali</p></div>
+        <div class="gallery-overlay"><span class="gallery-label">Classic Anarkali</span></div>
+      </div>
+      <div class="gallery-item" data-cat="party">
+        <div class="gallery-placeholder" style="height:220px;"><span>💫</span><p>Choli Design</p></div>
+        <div class="gallery-overlay"><span class="gallery-label">Embroidered Choli</span></div>
+      </div>
+      <div class="gallery-item" data-cat="bridal">
+        <div class="gallery-placeholder" style="height:360px;"><span>💍</span><p>Bridal Set</p></div>
+        <div class="gallery-overlay"><span class="gallery-label">Gold Bridal Ensemble</span></div>
+      </div>
+      <div class="gallery-item" data-cat="casual">
+        <div class="gallery-placeholder" style="height:250px;"><span>🌺</span><p>Palazzo Set</p></div>
+        <div class="gallery-overlay"><span class="gallery-label">Floral Palazzo Set</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="process-header reveal">
+      <div class="section-tag">How It Works</div>
+      <h2 class="section-title">The <em>Atelier</em> <strong>Process</strong></h2>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-circle">01</div>
+        <h3 class="step-title">Consultation</h3>
+        <p class="step-desc">We begin with an in-depth conversation about your vision, occasion, and personal style preferences.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-circle">02</div>
+        <h3 class="step-title">Measurement</h3>
+        <p class="step-desc">Precise measurements are taken to ensure the garment is perfectly fitted to your unique silhouette.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-circle">03</div>
+        <h3 class="step-title">Crafting</h3>
+        <p class="step-desc">Our master tailors cut, sew, and embellish your garment with meticulous attention to every detail.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-circle">04</div>
+        <h3 class="step-title">Final Fitting</h3>
+        <p class="step-desc">You try on your creation. We make any final adjustments until the fit and finish are absolutely perfect.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="testi-header reveal">
+      <div class="section-tag">Kind Words</div>
+      <h2 class="section-title">What Our <em>Clients Say</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <span class="testi-quote">"</span>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Seema ji stitched my entire bridal trousseau and I could not have been happier. The fit was immaculate, the embroidery breathtaking. Every piece was exactly as I had dreamed.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div>
+            <div class="testi-name">Priya Sharma</div>
+            <div class="testi-place">Bride, 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <span class="testi-quote">"</span>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">I have been coming to Seema Silai Centre for five years now. Their attention to detail and understanding of what suits my body type is truly unmatched anywhere in the city.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Rekha Gupta</div>
+            <div class="testi-place">Regular Client</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <span class="testi-quote">"</span>
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">The alteration work done on my mother's vintage saree blouse was absolutely magical. They preserved its character while updating the fit perfectly. Highly recommend!</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Ananya Mehta</div>
+            <div class="testi-place">Delhi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-info">
+      <div class="section-tag reveal">Get in Touch</div>
+      <h2 class="section-title reveal">Book Your <em>Appointment</em></h2>
+      <p class="reveal">Ready to create something beautiful? Reach out to us and let's begin your bespoke journey together. We welcome consultations by appointment.</p>
+      <div class="contact-details reveal">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-item-text">
+            <span class="contact-item-label">Visit Us</span>
+            <span class="contact-item-value">123 Textile Market, Near City Mall<br/>New Delhi – 110001</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-item-text">
+            <span class="contact-item-label">Call Us</span>
+            <span class="contact-item-value">+91 98765 43210</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-item-text">
+            <span class="contact-item-label">Hours</span>
+            <span class="contact-item-value">Mon – Sat: 10:00 AM – 7:00 PM<br/>Sunday: By Appointment Only</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-item-text">
+            <span class="contact-item-label">Email</span>
+            <span class="contact-item-value">hello@seemassilai.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-social">
+        <a class="social-btn" href="#" title="Instagram">📷</a>
+        <a class="social-btn" href="#" title="WhatsApp">💬</a>
+        <a class="social-btn" href="#" title="Facebook">👍</a>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Your full name"/>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+91 00000 00000"/>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Service Required</label>
+        <select>
+          <option value="">Select a service</option>
+          <option>Bridal Couture</option>
+          <option>Salwar Kameez</option>
+          <option>Blouse & Choli</option>
+          <option>Alterations & Repairs</option>
+          <option>Designer Wear</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="5" placeholder="Tell us about your dream garment…"></textarea>
+      </div>
+      <button class="form-submit" onclick="submitForm(this)">Send Message →</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">Seema <span>Silai</span></a>
+        <p>Where fabric becomes art. Handcrafted garments for the discerning woman, stitched with love since 2008.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Bridal Couture</a></li>
+          <li><a href="#services">Salwar Kameez</a></li>
+          <li><a href="#services">Blouse & Choli</a></li>
+          <li><a href="#services">Alterations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><a href="mailto:hello@seemassilai.com">hello@seemassilai.com</a></li>
+          <li><a href="#contact">Book Appointment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Seema Silai Centre. Crafted with ♥</p>
+      <p>Designed with care &amp; precision</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===================== CURSOR =====================
+    const cursor = document.getElementById('cursor');
+    const cursorRing = document.getElementById('cursorRing');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+      cursorRing.style.left = e.clientX + 'px';
+      cursorRing.style.top = e.clientY + 'px';
+    });
+
+    document.querySelectorAll('a, button, .service-card, .gallery-item, .filter-btn').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+        cursorRing.style.transform = 'translate(-50%,-50%) scale(1.5)';
+        cursorRing.style.opacity = '0.4';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+        cursorRing.style.transform = 'translate(-50%,-50%) scale(1)';
+        cursorRing.style.opacity = '0.7';
+      });
+    });
+
+    // ===================== NAVBAR SCROLL =====================
+    const navbar = document.getElementById('navbar');
+    const backTop = document.getElementById('backTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+        backTop.classList.add('visible');
+      } else {
+        navbar.classList.remove('scrolled');
+        backTop.classList.remove('visible');
+      }
+    });
+
+    // ===================== MOBILE MENU =====================
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggleMenu() {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // ===================== SCROLL REVEAL =====================
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, 100);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // ===================== GALLERY FILTER =====================
+    function filterGallery(btn, cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (cat === 'all' || item.dataset.cat === cat) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // ===================== CONTACT FORM =====================
+    function submitForm(btn) {
+      const name = btn.closest('.contact-form').querySelector('input[type="text"]').value;
+      if (!name.trim()) {
+        alert('Please enter your name.');
+        return;
+      }
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = '#2d6a2d';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Send Message →';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3500);
+    }
+
+    // ===================== SMOOTH ANCHOR =====================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
